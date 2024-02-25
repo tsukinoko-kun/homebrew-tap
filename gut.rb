@@ -5,20 +5,20 @@
 class Gut < Formula
   desc "Git UI Tool"
   homepage "https://github.com/Frank-Mayer/gut"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Frank-Mayer/gut/releases/download/v0.1.0/gut_0.1.0_darwin_arm64.tar.gz"
-      sha256 "c1ab47fff0e1756074374e0762aa813d00f972dfbf94a72f8b43b08df552bbad"
+      url "https://github.com/Frank-Mayer/gut/releases/download/v0.1.1/gut_0.1.1_darwin_arm64.tar.gz"
+      sha256 "00f85b41ad3444930a9c873a49264d8a33efbb138fb3fff1360561a9539fd6b2"
 
       def install
         bin.install "gut"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/gut/releases/download/v0.1.0/gut_0.1.0_darwin_amd64.tar.gz"
-      sha256 "e090b6274ab1906ac920c0fd84942d4962a2974b0dff8dfcc0e821ad219b5d20"
+      url "https://github.com/Frank-Mayer/gut/releases/download/v0.1.1/gut_0.1.1_darwin_amd64.tar.gz"
+      sha256 "ab64e35bba648807a553a8e5b6a93f76a76c5a9e50bae2d9c77ec883f00ef72f"
 
       def install
         bin.install "gut"
@@ -28,16 +28,16 @@ class Gut < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Frank-Mayer/gut/releases/download/v0.1.0/gut_0.1.0_linux_arm64.tar.gz"
-      sha256 "bf31e975d136785ce86e6396f638640af845b4b29f267f660d715e0b1d8fd4c8"
+      url "https://github.com/Frank-Mayer/gut/releases/download/v0.1.1/gut_0.1.1_linux_arm64.tar.gz"
+      sha256 "047a2bb1e18d70a7cdeac5f74e44793c383663af0680e6ac06b84c45aa13bb56"
 
       def install
         bin.install "gut"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/gut/releases/download/v0.1.0/gut_0.1.0_linux_amd64.tar.gz"
-      sha256 "b1e438e575b841d365c23f67771c50829c8a04010a62589c84183cdfccc959d5"
+      url "https://github.com/Frank-Mayer/gut/releases/download/v0.1.1/gut_0.1.1_linux_amd64.tar.gz"
+      sha256 "3e1034507ae656ad0869b9e982a34c3b7369995402ecf7d7849dbbe98e870d3c"
 
       def install
         bin.install "gut"
