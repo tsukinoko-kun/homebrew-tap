@@ -5,20 +5,20 @@
 class Yab < Formula
   desc "Yet another build tool"
   homepage "https://github.com/Frank-Mayer/yab"
-  version "0.2.2"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Frank-Mayer/yab/releases/download/v0.2.2/yab_0.2.2_darwin_arm64.tar.gz"
-      sha256 "79ee1b17952f593a61bad217b0fea287aa354f1883585affb33f08ccdc96023d"
+      url "https://github.com/Frank-Mayer/yab/releases/download/v0.3.0/yab_0.3.0_darwin_arm64.tar.gz"
+      sha256 "9117f074abec5a04d611e990c6075379dcebbd174d16fdec9843c9d83ec427e8"
 
       def install
         bin.install "yab"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/yab/releases/download/v0.2.2/yab_0.2.2_darwin_amd64.tar.gz"
-      sha256 "97022907b6d8a252fda5135678133c7fe3f80f83ebbd883f575679c8b1e31cf7"
+      url "https://github.com/Frank-Mayer/yab/releases/download/v0.3.0/yab_0.3.0_darwin_amd64.tar.gz"
+      sha256 "647cc2293ebc9477a35b16eba877c289a2a28d4bc5d6db9734c3b735934fd4ca"
 
       def install
         bin.install "yab"
@@ -27,17 +27,17 @@ class Yab < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Frank-Mayer/yab/releases/download/v0.2.2/yab_0.2.2_linux_arm64.tar.gz"
-      sha256 "ac4e2d0de18e7003fbde9cfef02b489f211730fd579320ad4c40ad81ab31ec35"
+    if Hardware::CPU.intel?
+      url "https://github.com/Frank-Mayer/yab/releases/download/v0.3.0/yab_0.3.0_linux_amd64.tar.gz"
+      sha256 "dbac6f83bd0f250384345d979d6b62a78dc117b0f2c018d74116bd0ea09767d3"
 
       def install
         bin.install "yab"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/yab/releases/download/v0.2.2/yab_0.2.2_linux_amd64.tar.gz"
-      sha256 "39c0438d3cbda4a947dd3dccbaeec5e544f7769de618d240416869e8c7ad85fe"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Frank-Mayer/yab/releases/download/v0.3.0/yab_0.3.0_linux_arm64.tar.gz"
+      sha256 "ec596c89a32d02a7fd37e09f8cf028353f4c5dbbe9d988e2d01d7fce542672f1"
 
       def install
         bin.install "yab"
