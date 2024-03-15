@@ -5,20 +5,20 @@
 class Yab < Formula
   desc "Yet another build tool"
   homepage "https://github.com/Frank-Mayer/yab"
-  version "0.4.1"
+  version "0.4.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.1/yab_0.4.1_darwin_arm64.tar.gz"
-      sha256 "f8d852317915c96a96623e3de9dc7543b367e99e51a987d01854af5f4fbbd7a7"
+    if Hardware::CPU.intel?
+      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.2/yab_0.4.2_darwin_amd64.tar.gz"
+      sha256 "115702290734c58fb02623dfcedb62d53810a4d3073b6aa0128c1c39d65e9f1a"
 
       def install
         bin.install "yab"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.1/yab_0.4.1_darwin_amd64.tar.gz"
-      sha256 "ef6e06db4276216f3d9bd26c6c72c6c9d8ca9453730c3f3058dcb5cf9b6cd169"
+    if Hardware::CPU.arm?
+      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.2/yab_0.4.2_darwin_arm64.tar.gz"
+      sha256 "2d60fe228c2b5ff368fcd0fcc232c5cf4a84b2c9e34aa266d9abb4ed4eae4fd4"
 
       def install
         bin.install "yab"
@@ -27,17 +27,17 @@ class Yab < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.1/yab_0.4.1_linux_arm64.tar.gz"
-      sha256 "bd36a3a691c4bb0ae356bb6062273e5fc4fb7de557653522bc7a8c58f9d35f2a"
+    if Hardware::CPU.intel?
+      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.2/yab_0.4.2_linux_amd64.tar.gz"
+      sha256 "f07c8781ee53d67079da9ee3ebe43558e8accdb3a4ec0cddf872e77f0efff05f"
 
       def install
         bin.install "yab"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.1/yab_0.4.1_linux_amd64.tar.gz"
-      sha256 "8d61d4c2249edd5f44b5301b194c20442613077f16f31bdbda55a50b8c616408"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.2/yab_0.4.2_linux_arm64.tar.gz"
+      sha256 "9021bc69c423099063ae97cef842b9789422b038d0ee6493bbed5c252ceafa7d"
 
       def install
         bin.install "yab"
