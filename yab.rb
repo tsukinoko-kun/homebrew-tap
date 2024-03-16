@@ -5,20 +5,20 @@
 class Yab < Formula
   desc "Yet another build tool"
   homepage "https://github.com/Frank-Mayer/yab"
-  version "0.4.2"
+  version "0.4.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.2/yab_0.4.2_darwin_amd64.tar.gz"
-      sha256 "115702290734c58fb02623dfcedb62d53810a4d3073b6aa0128c1c39d65e9f1a"
+      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.3/yab_0.4.3_darwin_amd64.tar.gz"
+      sha256 "95690c5c118f3ee490f387cd62cf1d7062a43a047e266a2431033e1835780a33"
 
       def install
         bin.install "yab"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.2/yab_0.4.2_darwin_arm64.tar.gz"
-      sha256 "2d60fe228c2b5ff368fcd0fcc232c5cf4a84b2c9e34aa266d9abb4ed4eae4fd4"
+      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.3/yab_0.4.3_darwin_arm64.tar.gz"
+      sha256 "a252bbcf4057f536b57ce63866ab7e3ce2886c436b4f81ed27f439a39877d9b6"
 
       def install
         bin.install "yab"
@@ -28,16 +28,16 @@ class Yab < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.2/yab_0.4.2_linux_amd64.tar.gz"
-      sha256 "f07c8781ee53d67079da9ee3ebe43558e8accdb3a4ec0cddf872e77f0efff05f"
+      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.3/yab_0.4.3_linux_amd64.tar.gz"
+      sha256 "5b2ec701095252deec0712fc2a2102a0ac991a6448c01ad5139f17805019a3b3"
 
       def install
         bin.install "yab"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.2/yab_0.4.2_linux_arm64.tar.gz"
-      sha256 "9021bc69c423099063ae97cef842b9789422b038d0ee6493bbed5c252ceafa7d"
+      url "https://github.com/Frank-Mayer/yab/releases/download/v0.4.3/yab_0.4.3_linux_arm64.tar.gz"
+      sha256 "4fd90e820b33be8813426106a57b5c5f750d3b97f06b403c9219ae9698e09f0d"
 
       def install
         bin.install "yab"
