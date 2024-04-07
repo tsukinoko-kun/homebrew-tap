@@ -5,20 +5,20 @@
 class Serve < Formula
   desc "Simple file server with a little extra"
   homepage "https://github.com/Frank-Mayer/serve"
-  version "2.1.0"
+  version "2.2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Frank-Mayer/serve/releases/download/v2.1.0/serve_2.1.0_darwin_arm64.tar.gz"
-      sha256 "b2726702858433fc385527c71ca222722b81665002a41745b805434203ba67aa"
+    if Hardware::CPU.intel?
+      url "https://github.com/Frank-Mayer/serve/releases/download/v2.2.0/serve_2.2.0_darwin_amd64.tar.gz"
+      sha256 "aacbc698e851ea1b11a8436f6f70f8aefb6a42e26a2d1e4d90154dafc0aaa452"
 
       def install
         bin.install "serve"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/serve/releases/download/v2.1.0/serve_2.1.0_darwin_amd64.tar.gz"
-      sha256 "8312bf4639ff15c747f0ecba6dbea6caf025476636a8bedb0381677ecb10a854"
+    if Hardware::CPU.arm?
+      url "https://github.com/Frank-Mayer/serve/releases/download/v2.2.0/serve_2.2.0_darwin_arm64.tar.gz"
+      sha256 "8e601866326bf392bad239ac9622869474806d2f71f663ae701c0152d5c869c2"
 
       def install
         bin.install "serve"
@@ -27,17 +27,17 @@ class Serve < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Frank-Mayer/serve/releases/download/v2.1.0/serve_2.1.0_linux_arm64.tar.gz"
-      sha256 "5a77e5fb2b95f33ab827adc03c04d6f7ded78da21019caad3101b8c84ae5fa0e"
+    if Hardware::CPU.intel?
+      url "https://github.com/Frank-Mayer/serve/releases/download/v2.2.0/serve_2.2.0_linux_amd64.tar.gz"
+      sha256 "dc461fe20085558f41e73de747d7c8ed8b41705f7be3435289875f297c6ce83a"
 
       def install
         bin.install "serve"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/serve/releases/download/v2.1.0/serve_2.1.0_linux_amd64.tar.gz"
-      sha256 "6557c91feff2c010cb7a9b945a41c63b47fcc964a1658e2262820deb661103d4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Frank-Mayer/serve/releases/download/v2.2.0/serve_2.2.0_linux_arm64.tar.gz"
+      sha256 "5f2dfa786dfe1cbac4121fa886d5e43785c79978a178f6957434724a49c3fd40"
 
       def install
         bin.install "serve"
