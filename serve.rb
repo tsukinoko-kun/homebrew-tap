@@ -5,20 +5,20 @@
 class Serve < Formula
   desc "Simple file server with a little extra"
   homepage "https://github.com/Frank-Mayer/serve"
-  version "2.2.2"
+  version "2.2.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/serve/releases/download/v2.2.2/serve_2.2.2_darwin_amd64.tar.gz"
-      sha256 "27ce9fef5d273c6d14c8a6452b1a0bced945c4fb7b18b4b2c1de79529ab1d64f"
+      url "https://github.com/Frank-Mayer/serve/releases/download/v2.2.3/serve_2.2.3_darwin_amd64.tar.gz"
+      sha256 "bfd52801dd6549845a875098f5d7bd4ff252c7fe2110ef51138dd6af8e33049f"
 
       def install
         bin.install "serve"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Frank-Mayer/serve/releases/download/v2.2.2/serve_2.2.2_darwin_arm64.tar.gz"
-      sha256 "28ce7fe28d11535e83b57caf1d4b0539734208d7e23ec39609fd488ff63c1f62"
+      url "https://github.com/Frank-Mayer/serve/releases/download/v2.2.3/serve_2.2.3_darwin_arm64.tar.gz"
+      sha256 "42f5bac85fc68691a226f43fc9be203c40ce56b4616d7a093755e6299392e828"
 
       def install
         bin.install "serve"
@@ -28,16 +28,16 @@ class Serve < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/serve/releases/download/v2.2.2/serve_2.2.2_linux_amd64.tar.gz"
-      sha256 "ef0206a324a76fc400beff32dd6a6067cac60709b8869e4c7f7e03627bdfd280"
+      url "https://github.com/Frank-Mayer/serve/releases/download/v2.2.3/serve_2.2.3_linux_amd64.tar.gz"
+      sha256 "a4315eea2116f4f64d873d87f9b262aea69e801e10e05e2737b5260465f46498"
 
       def install
         bin.install "serve"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Frank-Mayer/serve/releases/download/v2.2.2/serve_2.2.2_linux_arm64.tar.gz"
-      sha256 "a2a8909e167b5cada560de62fdf8077235dee6c6d273002bfdb42835e2db2df2"
+      url "https://github.com/Frank-Mayer/serve/releases/download/v2.2.3/serve_2.2.3_linux_arm64.tar.gz"
+      sha256 "35d9e1a7683a6936286ae8c9bae1e417297abcc4b18d67ec4c14d7fe2b2378fe"
 
       def install
         bin.install "serve"
