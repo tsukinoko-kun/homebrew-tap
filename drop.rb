@@ -5,20 +5,20 @@
 class Drop < Formula
   desc "drop is a replacement for the GNU `rm` command"
   homepage "https://github.com/Frank-Mayer/drop"
-  version "0.0.0"
+  version "0.0.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Frank-Mayer/drop/releases/download/v0.0.0/drop_0.0.0_darwin_arm64.tar.gz"
-      sha256 "8be5417616b433ed2b3e26ea843f3f3a08b26b956f8471777a044eaaa1f133c7"
+    if Hardware::CPU.intel?
+      url "https://github.com/tsukinoko-kun/drop/releases/download/v0.0.1/drop_0.0.1_darwin_amd64.tar.gz"
+      sha256 "962ca49bf405429c0aa7c0ffeffec680a89e6c8edd385c094de5df6e9b90a609"
 
       def install
         bin.install "drop"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/drop/releases/download/v0.0.0/drop_0.0.0_darwin_amd64.tar.gz"
-      sha256 "f992b5d84f181112ac307cd71cabb1b0cfa2b01129e5fd735a89838ef457f66e"
+    if Hardware::CPU.arm?
+      url "https://github.com/tsukinoko-kun/drop/releases/download/v0.0.1/drop_0.0.1_darwin_arm64.tar.gz"
+      sha256 "c87624adafae8ef628d80d3609f600a84ea4d68dc6f6f5a51252375ae134890f"
 
       def install
         bin.install "drop"
@@ -27,17 +27,17 @@ class Drop < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Frank-Mayer/drop/releases/download/v0.0.0/drop_0.0.0_linux_arm64.tar.gz"
-      sha256 "3e86aeaf73d6c592c866459bf3b5696b2d2c2b25019fdc7089e887bf9b82a802"
+    if Hardware::CPU.intel?
+      url "https://github.com/tsukinoko-kun/drop/releases/download/v0.0.1/drop_0.0.1_linux_amd64.tar.gz"
+      sha256 "26e1815d1c72e0e8b2801b51306bc81e0dd872bcfe0570320e571c8a757d69a3"
 
       def install
         bin.install "drop"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/drop/releases/download/v0.0.0/drop_0.0.0_linux_amd64.tar.gz"
-      sha256 "97e9bc3e32967eb3c00050606ad1366c547c8092134f101894a658ae6d6965a3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tsukinoko-kun/drop/releases/download/v0.0.1/drop_0.0.1_linux_arm64.tar.gz"
+      sha256 "2b0fbc0d1ee4a0d367e312e687c78fbcbd60a9f63c894537f7f75f6f3a1417d0"
 
       def install
         bin.install "drop"
