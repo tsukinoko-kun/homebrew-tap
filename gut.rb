@@ -5,20 +5,20 @@
 class Gut < Formula
   desc "Git UI Tool"
   homepage "https://github.com/Frank-Mayer/gut"
-  version "0.2.1"
+  version "0.2.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/gut/releases/download/v0.2.1/gut_0.2.1_darwin_amd64.tar.gz"
-      sha256 "09eb355fec3d9d63001651ab47dbc286c4e0b889beedc4074c2b0c78f6078b2d"
+      url "https://github.com/tsukinoko-kun/gut/releases/download/v0.2.2/gut_0.2.2_darwin_amd64.tar.gz"
+      sha256 "3e5b7799d0be38b904ead367c66650a041dde114ea117152a5b35e248b4cff01"
 
       def install
         bin.install "gut"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Frank-Mayer/gut/releases/download/v0.2.1/gut_0.2.1_darwin_arm64.tar.gz"
-      sha256 "127ef30773972cd99dee8a36b79f97d595d5dad6bca1531338662dc953d0304d"
+      url "https://github.com/tsukinoko-kun/gut/releases/download/v0.2.2/gut_0.2.2_darwin_arm64.tar.gz"
+      sha256 "773a0e62ae05187453554917da077f5629d31b2d09d7b1168c769b0f4f11e7ef"
 
       def install
         bin.install "gut"
@@ -27,17 +27,17 @@ class Gut < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Frank-Mayer/gut/releases/download/v0.2.1/gut_0.2.1_linux_arm64.tar.gz"
-      sha256 "ea6447c391c395fe915109ba560043f87ec83be22a3c2bc4748e418031db4380"
+    if Hardware::CPU.intel?
+      url "https://github.com/tsukinoko-kun/gut/releases/download/v0.2.2/gut_0.2.2_linux_amd64.tar.gz"
+      sha256 "7955577fb02791ce8d5e4fb1140c4acb812d194de8b8ead4f911a25025535c00"
 
       def install
         bin.install "gut"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Frank-Mayer/gut/releases/download/v0.2.1/gut_0.2.1_linux_amd64.tar.gz"
-      sha256 "740511dbf0f8a8be2222623439ff8f84bbac085158ef46a4cb5718711dc52bd2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tsukinoko-kun/gut/releases/download/v0.2.2/gut_0.2.2_linux_arm64.tar.gz"
+      sha256 "5b06ff094b38f3df1010debc15d50ff741ab48941a770908f43b1afc923dda02"
 
       def install
         bin.install "gut"
