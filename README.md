@@ -3,12 +3,13 @@
 ## Add this tap
 
 ```sh
-brew tap Frank-Mayer/tap
+brew tap tsukinoko-kun/tap
 ```
 
 ## Install the software
 
-For example [`yab`](https://github.com/Frank-Mayer/yab)
+For example [`yab`](https://github.com/tsukinoko-kun/yab)
+
 ```sh
-brew install Frank-Mayer/tap/yab
+brew install tsukinoko-kun/tap/yab
 ```
