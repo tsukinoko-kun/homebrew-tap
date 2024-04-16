@@ -1,0 +1,42 @@
+---
+import showdown from "showdown";
+
+showdown.setFlavor("github");
+
+export interface Props {
+  md: string;
+  inline: boolean;
+}
+
+const conv = new showdown.Converter({
+  omitExtraWLInCodeBlocks: true,
+  ghCompatibleHeaderId: true,
+  headerLevelStart: 2,
+  simplifiedAutoLink: true,
+  excludeTrailingPunctuationFromURLs: true,
+  strikethrough: true,
+  tables: true,
+  ghCodeBlocks: true,
+  tasklists: true,
+  smartIndentationFix: true,
+  simpleLineBreaks: true,
+  ghMentions: true,
+  encodeEmails: true,
+  openLinksInNewWindow: true,
+  emoji: true,
+  underline: true,
+  ellipsis: true,
+  completeHTMLDocument: false,
+  metadata: false,
+});
+
+const html = conv.makeHtml(Astro.props.md);
+---
+
+{
+  Astro.props.inline ? (
+    <span class="markdown inline" set:html={html} />
+  ) : (
+    <div class="markdown block" set:html={html} />
+  )
+}

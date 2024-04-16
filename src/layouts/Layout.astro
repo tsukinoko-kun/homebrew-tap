@@ -1,0 +1,49 @@
+---
+import "../style/index.scss";
+import { formulae } from "../formulae/server.ts";
+import { Search } from "../components/Search.tsx";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/homebrew.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="darkreader-lock" />
+    <title>{title}</title>
+  </head>
+
+  <body class="bg-ctp-base text-ctp-text">
+    <img
+      src="/homebrew.svg"
+      class="mx-auto block w-24"
+    />
+    <a
+      href="/"
+      class="mx-auto block w-fit text-center hover:underline hover:underline-offset-1"
+    >
+      <h1 class="text-4xl font-bold">Homebrew</h1>
+      <p class="text-lg">tsukinoko/tap</p>
+    </a>
+    <Search client:only />
+
+    <main class="mx-auto my-16 block w-full max-w-7xl px-2">
+      <slot />
+    </main>
+    <script
+      is:inline
+      id="formulae"
+      type="application/json"
+      set:html={JSON.stringify(formulae)}
+    />
+  </body>
+</html>

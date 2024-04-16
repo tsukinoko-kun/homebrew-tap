@@ -1,0 +1,20 @@
+---
+export interface Props {
+  href: string;
+  class?: string;
+  title?: string;
+}
+
+const target = Astro.props.href.startsWith("https://") ? "_blank" : undefined;
+const rel = target ? "noopener noreferrer" : undefined;
+---
+
+<a
+  href={Astro.props.href}
+  class={"text-ctp-mauve underline " + Astro.props.class}
+  target={target}
+  rel={rel}
+  title={Astro.props.title}
+>
+  <slot />
+</a>

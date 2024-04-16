@@ -1,0 +1,36 @@
+---
+import { formulae } from "../formulae/server.ts";
+import { Code } from "astro:components";
+import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
+---
+
+<Layout title="Homebrew">
+    <h2 class="text-2xl">Install Homebrew</h2>
+    <Code
+        code={`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`}
+        lang="shell"
+        theme="catppuccin-mocha"
+        inline
+        wrap
+    />
+
+    <p>Paste that in a macOS Terminal or Linux shell prompt.</p>
+    <p>
+        The script explains what it will do and then pauses before it does it.
+        Read about other <Link href="https://docs.brew.sh/Installation"
+            >installation options</Link
+        >.
+    </p>
+
+    <h3 class="mt-8 text-xl">All Formulae</h3>
+    <ul>
+        {
+            formulae.map((x) => (
+                <li>
+                    <Link href={`/formula/${x.id}`}>{x.name}</Link>
+                </li>
+            ))
+        }
+    </ul>
+</Layout>
