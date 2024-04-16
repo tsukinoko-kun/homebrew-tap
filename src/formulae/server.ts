@@ -49,7 +49,7 @@ function readFormulaFromFile(path: string) {
     if (res === null) {
       panic("name parsing failed");
     }
-    return res[1];
+    return res[1] as string;
   })();
 
   const desc = (() => {
@@ -57,21 +57,21 @@ function readFormulaFromFile(path: string) {
     if (res === null) {
       panic("desc parsing failed");
     }
-    return JSON.parse(res[1] ?? "");
+    return JSON.parse(res[1] ?? "") as string;
   })();
   const homepage = (() => {
     const res = /\s*homepage\s+("[^"]+")/.exec(content);
     if (res === null) {
       return "";
     }
-    return JSON.parse(res[1] ?? "");
+    return JSON.parse(res[1] ?? "") as string;
   })();
   const version = (() => {
     const res = /\s*version\s+("[^"]+")/.exec(content);
     if (res === null) {
       panic("version parsing failed");
     }
-    return JSON.parse(res[1] ?? "");
+    return JSON.parse(res[1] ?? "") as string;
   })();
 
   const platforms = (() => {
