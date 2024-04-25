@@ -38,10 +38,14 @@ const formula: Formula = Astro.props.formula;
   </section>
 
   {
-    formula.name.toLowerCase() !== formula.id.toLowerCase() ? (
+    formula.bin.filter((x) => x !== formula.id).length ? (
       <section class="my-8">
         <h3 class="inline">Also known as:</h3>
-        <span>{formula.id}</span>
+        {formula.bin
+          .filter((x) => x !== formula.id)
+          .map((x) => (
+            <span data-eq-id={formula.id === x}>{x}</span>
+          ))}
       </section>
     ) : null
   }

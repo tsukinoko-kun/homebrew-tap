@@ -1,15 +1,28 @@
 import { createFormulaeSignal, type Formulae } from "../formulae/client";
 import { createSignal } from "solid-js";
 
+function filterAndSort<T>(arr: T[], score: (el: T) => number): T[] {
+  return arr
+    .map((x) => ({ el: x, score: score(x) }))
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .map((x) => x.el);
+}
+
 export function Search() {
   const formulae = createFormulaeSignal();
   const [searchTerm, setSearchTerm] = createSignal("");
 
   const filterFormulas = (formulas: Formulae, searchTerm: string): Formulae => {
-    console.log(formulas);
-    return formulas.filter((formula) =>
-      formula.id.toLowerCase().includes(searchTerm.toLowerCase()),
-    );
+    searchTerm = searchTerm.toLowerCase();
+    return filterAndSort(formulas, (formula) => {
+      if (formula.id.toLowerCase().includes(searchTerm)) return 10;
+      for (const bin of formula.bin) {
+        if (bin.includes(searchTerm)) return 5;
+      }
+      if (formula.desc.toLowerCase().includes(searchTerm)) return 1;
+      return 0;
+    });
   };
 
   return (

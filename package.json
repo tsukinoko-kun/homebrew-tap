@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@catppuccin/tailwindcss": "^0.1.6",
+    "@total-typescript/ts-reset": "^0.5.1",
     "@types/node": "^20.12.7",
     "@types/showdown": "^2.0.6",
     "prettier": "^3.2.5",

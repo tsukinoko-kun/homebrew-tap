@@ -1,3 +1,4 @@
+import "@total-typescript/ts-reset";
 import { readFileSync, readdirSync } from "node:fs";
 import { basename } from "node:path";
 
@@ -44,6 +45,14 @@ function readFormulaFromFile(path: string) {
 
   const content = readFileSync(path, "utf8");
 
+  const bin = (() => {
+    const res = Array.from(content.matchAll(/^\s*bin\.install\s*(".+")$/gm))
+      .map((x) => x[1])
+      .filter(Boolean)
+      .map((x) => JSON.parse(x) as string);
+    return Array.from(new Set(res));
+  })();
+
   const name = (() => {
     const res = /class\s+([^\s]+)\s*<\s*Formula/.exec(content);
     if (res === null) {
@@ -85,7 +94,9 @@ function readFormulaFromFile(path: string) {
     const osSep = content.split(/^\s*on_[a-z]+\s+do/gm);
     osSep.shift();
     const cpu = osSep.map((x) => {
-      return Array.from(x.matchAll(/^\s+if\s(.+)$/gm)).map((x) => x[1]);
+      return Array.from(x.matchAll(/^\s+if\s(.+)$/gm))
+        .filter(Boolean)
+        .map((x) => x[1]);
     });
 
     if (os.length !== cpu.length) {
@@ -102,6 +113,7 @@ function readFormulaFromFile(path: string) {
     id,
     name,
     desc,
+    bin,
     homepage,
     version,
     platforms,
