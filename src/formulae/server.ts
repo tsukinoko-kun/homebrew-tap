@@ -22,6 +22,9 @@ function mapCpu(rb: string): string {
       return "ARM64";
     case "Hardware::CPU.arm? && Hardware::CPU.is_32_bit?":
       return "ARM32";
+
+    case "Hardware::CPU.is_64_bit?":
+      return "64 bit";
     default:
       return rb;
   }
