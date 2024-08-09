@@ -5,20 +5,20 @@
 class Serve < Formula
   desc "Simple file server with a little extra"
   homepage "https://github.com/tsukinoko-kun/serve"
-  version "2.3.1"
+  version "2.3.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/tsukinoko-kun/serve/releases/download/v2.3.1/serve_2.3.1_darwin_amd64.tar.gz"
-      sha256 "904f3b9e2f33fec2cc1169c09405bba3b8dc643238f995f5742745a1a43c4c9f"
+    on_intel do
+      url "https://github.com/tsukinoko-kun/serve/releases/download/v2.3.2/serve_2.3.2_darwin_amd64.tar.gz"
+      sha256 "93ba714f2f95737c85beccac05c09e5a340fd616f3dfd3413b8e14916eeefd66"
 
       def install
         bin.install "serve"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/tsukinoko-kun/serve/releases/download/v2.3.1/serve_2.3.1_darwin_arm64.tar.gz"
-      sha256 "2709c40f5e790f4d205ba5a2967cf62d36882569d41025f60448664895d2f85d"
+    on_arm do
+      url "https://github.com/tsukinoko-kun/serve/releases/download/v2.3.2/serve_2.3.2_darwin_arm64.tar.gz"
+      sha256 "9152ca684460538b5f6ed19490709fb2917738f7bfc3ed7b5b4a4b240bba770c"
 
       def install
         bin.install "serve"
@@ -27,20 +27,24 @@ class Serve < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/tsukinoko-kun/serve/releases/download/v2.3.1/serve_2.3.1_linux_amd64.tar.gz"
-      sha256 "8fce7229b27172567e9f0e14edbedc23307ad06e28659df676b4e76afd3181d1"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/tsukinoko-kun/serve/releases/download/v2.3.2/serve_2.3.2_linux_amd64.tar.gz"
+        sha256 "3ed87f84a56f242ae5bc25f36e9e5b289962944100b34aaae41dcca38b167baf"
 
-      def install
-        bin.install "serve"
+        def install
+          bin.install "serve"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tsukinoko-kun/serve/releases/download/v2.3.1/serve_2.3.1_linux_arm64.tar.gz"
-      sha256 "8a6de35f39189e1400342c13c872befe12c8fcefaec12e6b640b0e4de0ff99e4"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/tsukinoko-kun/serve/releases/download/v2.3.2/serve_2.3.2_linux_arm64.tar.gz"
+        sha256 "977a9073b11398a87b2267659f3eee22d6147fb24507c7c54f2b32ee9d6ab1be"
 
-      def install
-        bin.install "serve"
+        def install
+          bin.install "serve"
+        end
       end
     end
   end
