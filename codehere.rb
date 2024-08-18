@@ -5,20 +5,20 @@
 class Codehere < Formula
   desc "Code project bootspraping tool"
   homepage "https://github.com/tsukinoko-kun/codehere"
-  version "0.0.0"
+  version "0.1.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/tsukinoko-kun/codehere/releases/download/v0.0.0/codehere_0.0.0_darwin_amd64.tar.gz"
-      sha256 "6e53f98947ae2a6c1083bdf4b4cf5553eb59096a98e154f96e4d718a96c6ccfa"
+      url "https://github.com/tsukinoko-kun/codehere/releases/download/v0.1.0/codehere_0.1.0_darwin_amd64.tar.gz"
+      sha256 "8ce29f21995dfb273b2d2e8dc1015e2b8b04a0f28474311c6c57f6b8d1d8d902"
 
       def install
         bin.install "codehere"
       end
     end
     on_arm do
-      url "https://github.com/tsukinoko-kun/codehere/releases/download/v0.0.0/codehere_0.0.0_darwin_arm64.tar.gz"
-      sha256 "3999bd391b1db7f4d15c39cf365f0118073978b1515293f21d6eab2b49d9fa35"
+      url "https://github.com/tsukinoko-kun/codehere/releases/download/v0.1.0/codehere_0.1.0_darwin_arm64.tar.gz"
+      sha256 "c48dab0834dcf34015793cbf14e71d135965e8121de7f211174d9cbda606f2b5"
 
       def install
         bin.install "codehere"
@@ -29,8 +29,8 @@ class Codehere < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/codehere/releases/download/v0.0.0/codehere_0.0.0_linux_amd64.tar.gz"
-        sha256 "6172434df87bc3ba70391cbd45a225c14fedb782a160f3c76aa470268231fecd"
+        url "https://github.com/tsukinoko-kun/codehere/releases/download/v0.1.0/codehere_0.1.0_linux_amd64.tar.gz"
+        sha256 "2ffbab3d4ae2bb15f4e14e248abd377234e4a874a764db1f07436ecbf50d8bee"
 
         def install
           bin.install "codehere"
@@ -39,8 +39,8 @@ class Codehere < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/codehere/releases/download/v0.0.0/codehere_0.0.0_linux_arm64.tar.gz"
-        sha256 "7f788fb96173baf334abac1d0ba9ddf5f0274119dee235a65dd6d3d7f1597418"
+        url "https://github.com/tsukinoko-kun/codehere/releases/download/v0.1.0/codehere_0.1.0_linux_arm64.tar.gz"
+        sha256 "ddd4bc15832a1e7690038e915b1c4d5c84daefda94e9b635cf67e8a20da36c28"
 
         def install
           bin.install "codehere"
