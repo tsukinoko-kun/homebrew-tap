@@ -28,10 +28,10 @@ const { title } = Astro.props;
       href="/"
       class="mx-auto block w-fit text-center hover:underline hover:underline-offset-1"
     >
-      <h1 class="text-4xl font-bold">Homebrew</h1>
+      <p class="text-4xl font-bold">Homebrew</p>
       <p class="text-lg">tsukinoko-kun/tap</p>
     </a>
-    <Search client:only />
+    <Search client:only="solid" />
 
     <main class="mx-auto my-16 block w-full max-w-7xl px-2">
       <slot />

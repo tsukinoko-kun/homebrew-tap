@@ -4,30 +4,44 @@ import { Code } from "astro:components";
 import Markdown from "../../../components/Markdown.astro";
 import Link from "../../../components/Link.astro";
 import { formulae, type Formula } from "../../../formulae/server";
+import { get } from "../../../utils";
 
 export interface Props {
   formula: Formula;
+  readmeMd: string;
 }
 
-export function getStaticPaths() {
-  return formulae.map((x: Formula) => {
-    return {
-      params: { formula: x.id },
-      props: { formula: x },
-    };
-  });
+export async function getStaticPaths() {
+  return Promise.all(
+    formulae.map(async (x: Formula) => {
+      return {
+        params: {
+          formula: x.id,
+        },
+        props: {
+          formula: x,
+          readmeMd: await get(
+            x.homepage.replace(
+              "://github.com/",
+              "://raw.githubusercontent.com/",
+            ) + "/main/README.md",
+          ),
+        },
+      };
+    }),
+  );
 }
 
 const formula: Formula = Astro.props.formula;
 ---
 
 <Layout title={formula.name + " - Homebrew Formulae"}>
-  <h2 class="text-3xl font-bold">{formula.name}</h2>
+  <h1>{formula.name}</h1>
 
   <section class="my-8"><Markdown md={formula.desc} inline /></section>
 
   <section class="my-8">
-    <h3>Install command:</h3>
+    <h2>Install command</h2>
     <Code
       class="block w-fit text-left"
       code={`brew tap tsukinoko-kun/tap\nbrew install tsukinoko-kun/tap/${formula.id}`}
@@ -40,7 +54,7 @@ const formula: Formula = Astro.props.formula;
   {
     formula.bin.filter((x) => x !== formula.id).length ? (
       <section class="my-8">
-        <h3 class="inline">Also known as:</h3>
+        <h2 class="inline">Also known as</h2>
         {formula.bin
           .filter((x) => x !== formula.id)
           .map((x) => (
@@ -54,12 +68,12 @@ const formula: Formula = Astro.props.formula;
     <Link href={formula.homepage}>{formula.homepage}</Link>
   </section>
   <section class="my-8">
-    <h3 class="inline">Current version:</h3>
+    <h2>Current version</h2>
     {formula.version}
   </section>
 
   <section class="my-8">
-    <h3>Platforms:</h3>
+    <h2>Platforms</h2>
     {
       formula.platforms
         .filter((platform) => platform.cpu.length)
@@ -75,4 +89,16 @@ const formula: Formula = Astro.props.formula;
         ))
     }
   </section>
+
+  {
+    Astro.props.readmeMd ? (
+      <section class="my-8">
+        <h2>README.md</h2>
+        <Markdown
+          class="rounded-md border-2 border-solid border-ctp-crust p-4"
+          md={Astro.props.readmeMd}
+        />
+      </section>
+    ) : null
+  }
 </Layout>

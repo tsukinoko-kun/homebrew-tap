@@ -9,13 +9,68 @@
   min-width: 0;
   min-height: 0;
   box-sizing: border-box;
-  outline: none !important;
-  border: none !important;
+  outline: none;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  @apply text-4xl font-extrabold;
+}
+
+h2 {
+  @apply mt-8 text-3xl font-bold;
+}
+
+h3 {
+  @apply text-2xl font-semibold;
+}
+
+h4 {
+  @apply text-xl font-semibold;
+}
+
+h5 {
+  @apply text-lg font-medium;
 }
 
 .markdown {
   code {
     font-family: "JetBrains Mono", "Courier New", Courier, monospace;
     background-color: #00000080;
+    color: #fff;
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  > p,
+  > pre {
+    margin: 1rem 0;
+  }
+
+  > p > img {
+    aspect-ratio: attr(width) / attr(height);
+    max-height: 32rem;
+    margin: 1rem auto;
+    display: block;
+  }
+
+  a {
+    @apply text-ctp-mauve underline;
+  }
+
+  &.block {
+    width: 100%;
+    overflow-x: auto;
   }
 }

@@ -7,29 +7,6 @@ function panic(...arg: any[]): never {
   process.exit(1);
 }
 
-function mapCpu(rb: string): string {
-  switch (rb.trim()) {
-    case "Hardware::CPU.intel?":
-      return "x86_64";
-    case "Hardware::CPU.intel? && Hardware::CPU.is_64_bit?":
-      return "x86_64";
-    case "Hardware::CPU.intel? && Hardware::CPU.is_32_bit?":
-      return "i386";
-
-    case "Hardware::CPU.arm?":
-      return "ARM";
-    case "Hardware::CPU.arm? && Hardware::CPU.is_64_bit?":
-      return "ARM64";
-    case "Hardware::CPU.arm? && Hardware::CPU.is_32_bit?":
-      return "ARM32";
-
-    case "Hardware::CPU.is_64_bit?":
-      return "64 bit";
-    default:
-      return rb;
-  }
-}
-
 const rootDir = readdirSync(".");
 export const formulae = rootDir
   .filter((x) => x.endsWith(".rb"))
@@ -87,29 +64,38 @@ function readFormulaFromFile(path: string) {
   })();
 
   const platforms = (() => {
-    const os = Array.from(content.matchAll(/on_([a-z]+)\s+do/g)).map(
-      (x) => x[1],
-    ) as string[];
-    if (!os) {
-      panic("os parsing failed");
+    const platforms = new Array<{ os: string; cpu: string[] }>();
+    let os = { os: "", cpu: [] as string[] };
+    for (const line of content.split("\n")) {
+      const onRes = /^\s*on_([a-z]+)\s+do/.exec(line);
+      if (!onRes) continue;
+      const on = onRes[1]?.toLowerCase();
+      if (!on) continue;
+      switch (on) {
+        case "macos":
+        case "linux":
+        case "windows":
+          if (os.os) {
+            platforms.push(structuredClone(os));
+            os.cpu = [];
+          }
+          os.os = on;
+          break;
+        case "arm":
+          os.cpu.push("ARM");
+          break;
+        case "intel":
+          os.cpu.push("x86_64");
+          break;
+        default:
+          os.cpu.push(on);
+          continue;
+      }
     }
-
-    const osSep = content.split(/^\s*on_[a-z]+\s+do/gm);
-    osSep.shift();
-    const cpu = osSep.map((x) => {
-      return Array.from(x.matchAll(/^\s+if\s(.+)$/gm))
-        .filter(Boolean)
-        .map((x) => x[1]);
-    });
-
-    if (os.length !== cpu.length) {
-      panic("failed to marge os and cpu");
+    if (os.os) {
+      platforms.push(os);
     }
-
-    return os.map((os, i) => ({
-      os: os,
-      cpu: (cpu[i] as string[]).map(mapCpu),
-    }));
+    return platforms;
   })();
 
   return {

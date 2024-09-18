@@ -5,13 +5,14 @@ showdown.setFlavor("github");
 
 export interface Props {
   md: string;
-  inline: boolean;
+  class?: string;
+  inline?: boolean;
 }
 
 const conv = new showdown.Converter({
   omitExtraWLInCodeBlocks: true,
   ghCompatibleHeaderId: true,
-  headerLevelStart: 2,
+  headerLevelStart: 3,
   simplifiedAutoLink: true,
   excludeTrailingPunctuationFromURLs: true,
   strikethrough: true,
@@ -35,8 +36,8 @@ const html = conv.makeHtml(Astro.props.md);
 
 {
   Astro.props.inline ? (
-    <span class="markdown inline" set:html={html} />
+    <span class:list={["markdown inline", Astro.props.class]} set:html={html} />
   ) : (
-    <div class="markdown block" set:html={html} />
+    <div class:list={["markdown block", Astro.props.class]} set:html={html} />
   )
 }
