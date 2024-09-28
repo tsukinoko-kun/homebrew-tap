@@ -5,20 +5,20 @@
 class Smash < Formula
   desc "Cross platform interactive shell"
   homepage "https://github.com/tsukinoko-kun/smash"
-  version "0.4.0"
+  version "0.5.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/tsukinoko-kun/smash/releases/download/v0.4.0/smash_0.4.0_darwin_amd64.tar.gz"
-      sha256 "1f4e97750ae9294e58e1053a62f2e8372d198c02ae581025e18ef22bb3da73f4"
+      url "https://github.com/tsukinoko-kun/smash/releases/download/v0.5.0/smash_0.5.0_darwin_amd64.tar.gz"
+      sha256 "d08c2313dda975fab043484271087ca74c6574732819037262626384df24687e"
 
       def install
         bin.install "smash"
       end
     end
     on_arm do
-      url "https://github.com/tsukinoko-kun/smash/releases/download/v0.4.0/smash_0.4.0_darwin_arm64.tar.gz"
-      sha256 "be5756623bbf57af0c6721a1fa4d94c68bd0a683497d494621108dc1b8cafd51"
+      url "https://github.com/tsukinoko-kun/smash/releases/download/v0.5.0/smash_0.5.0_darwin_arm64.tar.gz"
+      sha256 "09a0c2520d9c690dbf5c065d3144a859b35ebf6b7cbb34f9bb701619105281a4"
 
       def install
         bin.install "smash"
@@ -29,8 +29,8 @@ class Smash < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/smash/releases/download/v0.4.0/smash_0.4.0_linux_amd64.tar.gz"
-        sha256 "c5685b65508337e2728df139aa413e414042d2609066d8019aa16cf725b00c15"
+        url "https://github.com/tsukinoko-kun/smash/releases/download/v0.5.0/smash_0.5.0_linux_amd64.tar.gz"
+        sha256 "d392c4ad17aaf79e0788df2b83932286969f43a81ccac841adcfb2aa3802ff4c"
 
         def install
           bin.install "smash"
@@ -39,8 +39,8 @@ class Smash < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/smash/releases/download/v0.4.0/smash_0.4.0_linux_arm64.tar.gz"
-        sha256 "d3934beac0e16171459aa61eeed402b0b5f0a14037e810cda4629e45f8fc717b"
+        url "https://github.com/tsukinoko-kun/smash/releases/download/v0.5.0/smash_0.5.0_linux_arm64.tar.gz"
+        sha256 "0dd45d5db04327acf752e01b0f62f3bad731e7aefa9f8a8c683b0d145c088d29"
 
         def install
           bin.install "smash"
