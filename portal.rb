@@ -5,20 +5,20 @@
 class Portal < Formula
   desc "Simple local file sharing"
   homepage "https://github.com/tsukinoko-kun/portal"
-  version "1.3.0"
+  version "1.3.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/tsukinoko-kun/portal/releases/download/v1.3.0/portal_1.3.0_darwin_amd64.tar.gz"
-      sha256 "bb4dabd54bd0a309e5d33b2750f2520ac730054823b6e188d437629416d037bc"
+      url "https://github.com/tsukinoko-kun/portal/releases/download/v1.3.1/portal_1.3.1_darwin_amd64.tar.gz"
+      sha256 "2f15e36f19749472bc7298fd4ba3f2062d1238a61d5c343cf0e0043d021b40ec"
 
       def install
         bin.install "portal"
       end
     end
     on_arm do
-      url "https://github.com/tsukinoko-kun/portal/releases/download/v1.3.0/portal_1.3.0_darwin_arm64.tar.gz"
-      sha256 "5b098ddebe8cc8d2af06b5a3e34ce8360cf4257aa0de843a2057f015cbd2fb98"
+      url "https://github.com/tsukinoko-kun/portal/releases/download/v1.3.1/portal_1.3.1_darwin_arm64.tar.gz"
+      sha256 "bac36beb71e7e7810afabb4ed3c28f502dc9aca26b9dcd2df2a4fc78133b1f22"
 
       def install
         bin.install "portal"
@@ -29,8 +29,8 @@ class Portal < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/portal/releases/download/v1.3.0/portal_1.3.0_linux_amd64.tar.gz"
-        sha256 "dfc6c4dd89da7c1fb54056986dff9cafeb6d1ee35862225bd8072983a78f3ead"
+        url "https://github.com/tsukinoko-kun/portal/releases/download/v1.3.1/portal_1.3.1_linux_amd64.tar.gz"
+        sha256 "8cb0c96c37d1196faec38dee93c2b6b8fc6bce78bf687e5384ae3f2b7b2726b3"
 
         def install
           bin.install "portal"
@@ -39,8 +39,8 @@ class Portal < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/portal/releases/download/v1.3.0/portal_1.3.0_linux_arm64.tar.gz"
-        sha256 "877753d0c86d8d4b53b6099f2ffdbfc92c93af5906b6e6c973d21b721f3b124d"
+        url "https://github.com/tsukinoko-kun/portal/releases/download/v1.3.1/portal_1.3.1_linux_arm64.tar.gz"
+        sha256 "0af4ff8b9f53b467a50d96d517d950f6f9c774589b83594d23ad68fcde7cb791"
 
         def install
           bin.install "portal"
