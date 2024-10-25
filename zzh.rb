@@ -5,20 +5,20 @@
 class Zzh < Formula
   desc "Simple SSH wrapper"
   homepage "https://github.com/tsukinoko-kun/zzh"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/tsukinoko-kun/zzh/releases/download/v0.1.0/zzh_0.1.0_darwin_amd64.tar.gz"
-      sha256 "0ef36eaa60299be73d68513febe344a5e65036ebc0318157b7bcd184c7558f38"
+      url "https://github.com/tsukinoko-kun/zzh/releases/download/v0.1.1/zzh_0.1.1_darwin_amd64.tar.gz"
+      sha256 "4db27364a7ac5ec52fd71f9b084906ddc9a0171ce147a3776678e37193bda5b7"
 
       def install
         bin.install "zzh"
       end
     end
     on_arm do
-      url "https://github.com/tsukinoko-kun/zzh/releases/download/v0.1.0/zzh_0.1.0_darwin_arm64.tar.gz"
-      sha256 "a5a16aab951f6c4922b2b57310855bb018b78099bf7864c79c5fb01e6e1a613f"
+      url "https://github.com/tsukinoko-kun/zzh/releases/download/v0.1.1/zzh_0.1.1_darwin_arm64.tar.gz"
+      sha256 "633c37ca4d49009fc21a0d7a35c98ea429a2fe2141924474367dfa9dbd722d0a"
 
       def install
         bin.install "zzh"
@@ -29,8 +29,8 @@ class Zzh < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/zzh/releases/download/v0.1.0/zzh_0.1.0_linux_amd64.tar.gz"
-        sha256 "bb4f475d1a4398281ef6c7790c8bc222df14be8121b968ee1958a56aa0fe0064"
+        url "https://github.com/tsukinoko-kun/zzh/releases/download/v0.1.1/zzh_0.1.1_linux_amd64.tar.gz"
+        sha256 "aea310a9485899dbcf6085eed68c4313e3f652d305fdd1a0d45ae008adc97a66"
 
         def install
           bin.install "zzh"
@@ -39,8 +39,8 @@ class Zzh < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/zzh/releases/download/v0.1.0/zzh_0.1.0_linux_arm64.tar.gz"
-        sha256 "3292ad93f7a6707cfb59823ae13baa0500793d43e53a708f7132706dffa79c1d"
+        url "https://github.com/tsukinoko-kun/zzh/releases/download/v0.1.1/zzh_0.1.1_linux_arm64.tar.gz"
+        sha256 "5238a2aae23581d68d88f4f09857935f6de1e50b581d8a17164ece36f9e234bb"
 
         def install
           bin.install "zzh"
