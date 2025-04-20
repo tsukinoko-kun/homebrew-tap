@@ -5,20 +5,20 @@
 class Headshot < Formula
   desc "C++ header file generator"
   homepage "https://github.com/tsukinoko-kun/headshot"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/tsukinoko-kun/headshot/releases/download/v0.1.0/headshot_0.1.0_darwin_amd64.tar.gz"
-      sha256 "90157a023b563656398c275f4dc1da3b7d52852e50a3625f7dba31a68ec06d45"
+      url "https://github.com/tsukinoko-kun/headshot/releases/download/v0.1.1/headshot_0.1.1_darwin_amd64.tar.gz"
+      sha256 "ac4d6792584567643c77a695e80178e8bd8cc16d8df614ce1767949b8c3d4a2f"
 
       def install
         bin.install "headshot"
       end
     end
     on_arm do
-      url "https://github.com/tsukinoko-kun/headshot/releases/download/v0.1.0/headshot_0.1.0_darwin_arm64.tar.gz"
-      sha256 "cffd4d607c49f9f1e04c94f368780d971bdf0a11a7cc860cdc89e8eb9889fe93"
+      url "https://github.com/tsukinoko-kun/headshot/releases/download/v0.1.1/headshot_0.1.1_darwin_arm64.tar.gz"
+      sha256 "d9ba6245a7e07a38de86f5291ab5c63d5a7abd7d2e9f6b987fec428f303b4538"
 
       def install
         bin.install "headshot"
@@ -29,8 +29,8 @@ class Headshot < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/headshot/releases/download/v0.1.0/headshot_0.1.0_linux_amd64.tar.gz"
-        sha256 "be5a1de95761412ed03a894cac3a6f492b4384ec35178c62cb7c776d709fddab"
+        url "https://github.com/tsukinoko-kun/headshot/releases/download/v0.1.1/headshot_0.1.1_linux_amd64.tar.gz"
+        sha256 "aed91b4bf2288ec52948582a9086085e2f6a0d73e28e7d1bc6f1c6e94de2fedf"
 
         def install
           bin.install "headshot"
@@ -39,8 +39,8 @@ class Headshot < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/headshot/releases/download/v0.1.0/headshot_0.1.0_linux_arm64.tar.gz"
-        sha256 "edf02b9e10b06d4c9c4619e617ccb4f026c703e831818c377004101f61bc907c"
+        url "https://github.com/tsukinoko-kun/headshot/releases/download/v0.1.1/headshot_0.1.1_linux_arm64.tar.gz"
+        sha256 "7773289a761efd130fccfa931eb1c973de0d39f8cdc15bd337300e999b0a7a1e"
 
         def install
           bin.install "headshot"
