@@ -5,20 +5,20 @@
 class Vend < Formula
   desc "Manage external sources easily"
   homepage "https://github.com/tsukinoko-kun/vend"
-  version "1.1.2"
+  version "1.1.3"
 
   on_macos do
     on_intel do
-      url "https://github.com/tsukinoko-kun/vend/releases/download/v1.1.2/vend_1.1.2_darwin_amd64.tar.gz"
-      sha256 "4f057f82e0f5385fa727a220264990adfaa4fd7485e21de32db8bdf4bb8b6765"
+      url "https://github.com/tsukinoko-kun/vend/releases/download/v1.1.3/vend_1.1.3_darwin_amd64.tar.gz"
+      sha256 "e84c947e4a0f1bc85a04e97fdb61b025f2e6eb89f38740b478238e08b7ede24f"
 
       def install
         bin.install "vend"
       end
     end
     on_arm do
-      url "https://github.com/tsukinoko-kun/vend/releases/download/v1.1.2/vend_1.1.2_darwin_arm64.tar.gz"
-      sha256 "34b3d0e915cdeef5a20ab7d07c0516d9a4cfc8ab10fc79c5e09107d20e0e0bb0"
+      url "https://github.com/tsukinoko-kun/vend/releases/download/v1.1.3/vend_1.1.3_darwin_arm64.tar.gz"
+      sha256 "143611616036940d5fb4a8e63af783f02686f6a0f204f5b35ddfc0068953a1aa"
 
       def install
         bin.install "vend"
@@ -29,8 +29,8 @@ class Vend < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/vend/releases/download/v1.1.2/vend_1.1.2_linux_amd64.tar.gz"
-        sha256 "93b6091f17cf8ed69220753f8babb7e7cc9455dcddcac2bcaa64b7e53d7e45a4"
+        url "https://github.com/tsukinoko-kun/vend/releases/download/v1.1.3/vend_1.1.3_linux_amd64.tar.gz"
+        sha256 "1a8da52d328bdd755395809bbd1a9d7a7e7bb1f9c56f314d7fd0f659c49eea8b"
 
         def install
           bin.install "vend"
@@ -39,8 +39,8 @@ class Vend < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/vend/releases/download/v1.1.2/vend_1.1.2_linux_arm64.tar.gz"
-        sha256 "5a38e9fa081b27762197e50f2bd43abb636a48d302ebf89687bf9387ca86029e"
+        url "https://github.com/tsukinoko-kun/vend/releases/download/v1.1.3/vend_1.1.3_linux_arm64.tar.gz"
+        sha256 "121e60d49ea7542bf303c512370577fe10a8cc0b226055fb61856aea8d51f38e"
 
         def install
           bin.install "vend"
