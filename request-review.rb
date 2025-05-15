@@ -10,7 +10,7 @@ class RequestReview < Formula
   on_macos do
     on_intel do
       url "https://github.com/tsukinoko-kun/request-review/releases/download/v0.1.0/request-review_0.1.0_darwin_amd64.tar.gz"
-      sha256 "6f9747ab5c6a5ecd032d4275493b66c00fbc1bc6c8cc1083d3e58847093d9b97"
+      sha256 "20d39f1132050eb64b715b7b8ae5d645349819244902ad060d2596abf6b59c65"
 
       def install
         bin.install "request-review"
@@ -18,7 +18,7 @@ class RequestReview < Formula
     end
     on_arm do
       url "https://github.com/tsukinoko-kun/request-review/releases/download/v0.1.0/request-review_0.1.0_darwin_arm64.tar.gz"
-      sha256 "2beaa3bfd229462f0dd02566d5b5c89be90928b13d5b839f666501ea26875ad6"
+      sha256 "cc5eecfc3af7f9f5499178d1c976a92209145fd694c8633e5418bd4826efc470"
 
       def install
         bin.install "request-review"
@@ -30,7 +30,7 @@ class RequestReview < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/tsukinoko-kun/request-review/releases/download/v0.1.0/request-review_0.1.0_linux_amd64.tar.gz"
-        sha256 "344ab71737632dc05a49202de9481242836395ef216e32fe3c575ef07147e5d0"
+        sha256 "af4a10749f677b97ecd3800e416e715c4024cd58e3f76329da393bfb94f9d6ee"
 
         def install
           bin.install "request-review"
@@ -40,7 +40,7 @@ class RequestReview < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/tsukinoko-kun/request-review/releases/download/v0.1.0/request-review_0.1.0_linux_arm64.tar.gz"
-        sha256 "91eb69a2773851481e68fca7aaad1d404a0d18f23ada032d64c4d4144332ce42"
+        sha256 "476c954c6e6ecc9947add85540ea425a8afd4f49564076eae956876500ec32a0"
 
         def install
           bin.install "request-review"
