@@ -5,20 +5,23 @@
 class RequestReview < Formula
   desc "Forgeless merge requests"
   homepage "https://github.com/tsukinoko-kun/request-review"
-  version "0.1.0"
+  version "1.0.0"
+  license "MIT"
+
+  depends_on "git"
 
   on_macos do
     on_intel do
-      url "https://github.com/tsukinoko-kun/request-review/releases/download/v0.1.0/request-review_0.1.0_darwin_amd64.tar.gz"
-      sha256 "20d39f1132050eb64b715b7b8ae5d645349819244902ad060d2596abf6b59c65"
+      url "https://github.com/tsukinoko-kun/request-review/releases/download/v1.0.0/request-review_1.0.0_darwin_amd64.tar.gz"
+      sha256 "668f92525e0f8c338f46534c62c061e99dbf03249edcb30444eee7a86da74a11"
 
       def install
         bin.install "request-review"
       end
     end
     on_arm do
-      url "https://github.com/tsukinoko-kun/request-review/releases/download/v0.1.0/request-review_0.1.0_darwin_arm64.tar.gz"
-      sha256 "cc5eecfc3af7f9f5499178d1c976a92209145fd694c8633e5418bd4826efc470"
+      url "https://github.com/tsukinoko-kun/request-review/releases/download/v1.0.0/request-review_1.0.0_darwin_arm64.tar.gz"
+      sha256 "a8f5ea37ac7988663941523865c7965f16ca9c5352c375c123bf997d406972cd"
 
       def install
         bin.install "request-review"
@@ -29,8 +32,8 @@ class RequestReview < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/request-review/releases/download/v0.1.0/request-review_0.1.0_linux_amd64.tar.gz"
-        sha256 "af4a10749f677b97ecd3800e416e715c4024cd58e3f76329da393bfb94f9d6ee"
+        url "https://github.com/tsukinoko-kun/request-review/releases/download/v1.0.0/request-review_1.0.0_linux_amd64.tar.gz"
+        sha256 "a6fad1bc98ad6d3648f529018c89df92a6065f67e24c66e011025ad5c81639ea"
 
         def install
           bin.install "request-review"
@@ -39,8 +42,8 @@ class RequestReview < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/request-review/releases/download/v0.1.0/request-review_0.1.0_linux_arm64.tar.gz"
-        sha256 "476c954c6e6ecc9947add85540ea425a8afd4f49564076eae956876500ec32a0"
+        url "https://github.com/tsukinoko-kun/request-review/releases/download/v1.0.0/request-review_1.0.0_linux_arm64.tar.gz"
+        sha256 "1be4c5ef1563ce1975e7609410a0781f8b3615a2b5685a2df96b43ad7cba32e9"
 
         def install
           bin.install "request-review"
