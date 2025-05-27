@@ -5,23 +5,23 @@
 class Ohmygosh < Formula
   desc "Interactive shell written in Go with a UI inspired by Warp"
   homepage "https://github.com/tsukinoko-kun/ohmygosh"
-  version "1.2.1"
+  version "0.0.1"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     on_intel do
-      url "https://github.com/tsukinoko-kun/ohmygosh/releases/download/v1.2.1/ohmygosh_1.2.1_darwin_amd64.tar.gz"
-      sha256 "b58cd352904ce63a835468dc6698c37dda9fe0629c27847495185f77b7601749"
+      url "https://github.com/tsukinoko-kun/ohmygosh/releases/download/v0.0.1/ohmygosh_0.0.1_darwin_amd64.tar.gz"
+      sha256 "f38fda39c43aa5c41113e22dbdba6c03e96bc6a705e2ce6c812ab08e2ecd74fb"
 
       def install
         bin.install "ohmygosh"
       end
     end
     on_arm do
-      url "https://github.com/tsukinoko-kun/ohmygosh/releases/download/v1.2.1/ohmygosh_1.2.1_darwin_arm64.tar.gz"
-      sha256 "625f72af5445f3a27a08c0eaea194474eaaf9911c9822c81d92abf93824a86dd"
+      url "https://github.com/tsukinoko-kun/ohmygosh/releases/download/v0.0.1/ohmygosh_0.0.1_darwin_arm64.tar.gz"
+      sha256 "04e78b24acb5e7c6e230f5936b3480f83677b74961274a41d73c3b77810505e1"
 
       def install
         bin.install "ohmygosh"
@@ -32,8 +32,8 @@ class Ohmygosh < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/ohmygosh/releases/download/v1.2.1/ohmygosh_1.2.1_linux_amd64.tar.gz"
-        sha256 "1d44a29981dd7affb671df4c24448cc23fb2f50e15a55af1d3f139c90f5145f2"
+        url "https://github.com/tsukinoko-kun/ohmygosh/releases/download/v0.0.1/ohmygosh_0.0.1_linux_amd64.tar.gz"
+        sha256 "f82fbec8deea275392a5c674bd09059e2238baf8abb8aec0f060a5c9a581acaf"
 
         def install
           bin.install "ohmygosh"
@@ -42,8 +42,8 @@ class Ohmygosh < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/ohmygosh/releases/download/v1.2.1/ohmygosh_1.2.1_linux_arm64.tar.gz"
-        sha256 "f206c7072c69375f502771113bbd272de6c091f2bc1acfd2bafb409d91ecf35b"
+        url "https://github.com/tsukinoko-kun/ohmygosh/releases/download/v0.0.1/ohmygosh_0.0.1_linux_arm64.tar.gz"
+        sha256 "2cafffb97669adb45584c2c05db47dfc2c49d0dbbadd6efc2e60479a1706cdec"
 
         def install
           bin.install "ohmygosh"
