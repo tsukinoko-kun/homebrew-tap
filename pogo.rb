@@ -5,21 +5,21 @@
 class Pogo < Formula
   desc "Centralized version control system"
   homepage "https://github.com/tsukinoko-kun/pogo"
-  version "0.0.2"
+  version "0.0.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/tsukinoko-kun/pogo/releases/download/v0.0.2/pogo_0.0.2_darwin_amd64.tar.gz"
-      sha256 "27025a221fbdcb6c3ee914741fadcb195409a47cb2b4b1a8dddee6c0e51c93f6"
+      url "https://github.com/tsukinoko-kun/pogo/releases/download/v0.0.1/pogo_0.0.1_darwin_amd64.tar.gz"
+      sha256 "36d7b350fa9a16f20f9206631ebe63b1fa92da889ae56a7cdf059dc8d4232076"
 
       def install
         bin.install "pogo"
       end
     end
     on_arm do
-      url "https://github.com/tsukinoko-kun/pogo/releases/download/v0.0.2/pogo_0.0.2_darwin_arm64.tar.gz"
-      sha256 "8b65220895eb4437f09ba9b5fefb523b538da9c3ad3962349e4723b5768e76d0"
+      url "https://github.com/tsukinoko-kun/pogo/releases/download/v0.0.1/pogo_0.0.1_darwin_arm64.tar.gz"
+      sha256 "088c4f7bb3689f32f86be5a4f727e21846af467ec0cf26840207ae49e1484706"
 
       def install
         bin.install "pogo"
@@ -30,8 +30,8 @@ class Pogo < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/pogo/releases/download/v0.0.2/pogo_0.0.2_linux_amd64.tar.gz"
-        sha256 "cb2ee199620a31a71891f5d38ce845d77350b0beb853a3939a9938fbbc07fdea"
+        url "https://github.com/tsukinoko-kun/pogo/releases/download/v0.0.1/pogo_0.0.1_linux_amd64.tar.gz"
+        sha256 "d8ba20b8d34528e050f088198c204eeed68f4d818b0d9c588d6af0d4cd89ac32"
 
         def install
           bin.install "pogo"
@@ -40,8 +40,8 @@ class Pogo < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/pogo/releases/download/v0.0.2/pogo_0.0.2_linux_arm64.tar.gz"
-        sha256 "78abac904ad72f1194acdebfb6b3544af90580380f9f041f6a56f45cc55d2197"
+        url "https://github.com/tsukinoko-kun/pogo/releases/download/v0.0.1/pogo_0.0.1_linux_arm64.tar.gz"
+        sha256 "81f6a965f6cdb1417c6be7defc189a6f054ee8eaec9bc83398928ba95635fa42"
 
         def install
           bin.install "pogo"
