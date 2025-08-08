@@ -5,21 +5,21 @@
 class Netest < Formula
   desc "Network testing tool"
   homepage "https://github.com/tsukinoko-kun/netest"
-  version "1.0.0"
+  version "1.0.1"
   license "zlib"
 
   on_macos do
     on_intel do
-      url "https://github.com/tsukinoko-kun/netest/releases/download/v1.0.0/netest_1.0.0_darwin_amd64.tar.gz"
-      sha256 "a5f854c9facff706620521f30e80f6af1383add66a520d3b4880da53981698a6"
+      url "https://github.com/tsukinoko-kun/netest/releases/download/v1.0.1/netest_1.0.1_darwin_amd64.tar.gz"
+      sha256 "d4ae39b3e24715002a5b67cc9b3b91c47f9fafe0bcdf5bf601c89cb2c5e33f6c"
 
       def install
         bin.install "netest"
       end
     end
     on_arm do
-      url "https://github.com/tsukinoko-kun/netest/releases/download/v1.0.0/netest_1.0.0_darwin_arm64.tar.gz"
-      sha256 "adcda68b364daa0c0c2fe95d41a44e4e10c046aa8120c3fb81b698f6a7b52ba7"
+      url "https://github.com/tsukinoko-kun/netest/releases/download/v1.0.1/netest_1.0.1_darwin_arm64.tar.gz"
+      sha256 "08b29d0848a1ba68b8392c7048fa7e4e7c1fb65740da3a2ea1aa2d641b346c16"
 
       def install
         bin.install "netest"
@@ -30,8 +30,8 @@ class Netest < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/netest/releases/download/v1.0.0/netest_1.0.0_linux_amd64.tar.gz"
-        sha256 "e85ff41688a17d244cc0f8d8ed0b4e9e30c7f52b3f4e9ffb6675f89f6083aaf4"
+        url "https://github.com/tsukinoko-kun/netest/releases/download/v1.0.1/netest_1.0.1_linux_amd64.tar.gz"
+        sha256 "2567099a960096aa0a99c3c7e52ac5278d0d40f7e8e3e8b3824336b511140a86"
 
         def install
           bin.install "netest"
@@ -40,8 +40,8 @@ class Netest < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tsukinoko-kun/netest/releases/download/v1.0.0/netest_1.0.0_linux_arm64.tar.gz"
-        sha256 "5003f6b87aab39a9486908d70f730e39fdeb70dfae5e20d7dd36cce85f4b6a6b"
+        url "https://github.com/tsukinoko-kun/netest/releases/download/v1.0.1/netest_1.0.1_linux_arm64.tar.gz"
+        sha256 "965998d91f9d602d9ade3f8de9f2cccaf5a09649f82e67e5dffbb841d3581a12"
 
         def install
           bin.install "netest"
