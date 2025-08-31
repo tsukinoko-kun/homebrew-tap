@@ -15,7 +15,7 @@ class Gqlc < Formula
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "c1760159199f70615c7dffd495081ca3cf9359ea8deae9ed6f2db89e94290d27"
+      sha256 "9336213f12666fed7cb5b5482ab9747edb086fb87e249e84a91240ecd5fe52a3"
 
       def install
         bin.install "gqlc"
@@ -27,7 +27,7 @@ class Gqlc < Formula
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "64a454d3bffddf86cfd6394da2c950b39e0b65dcfa5c231dc1575a9d8161a2e8"
+      sha256 "625153e4abfdf6166a99e3fba86568ea7443335f39195021048afee0909dca6e"
 
       def install
         bin.install "gqlc"
@@ -42,7 +42,7 @@ class Gqlc < Formula
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "6e836c816859a9fe585672fc8121c3290abaf373fd10323e4d12a0423eb9bcde"
+      sha256 "1018f3dcb5769e6fb4970617765d367af20f2bc66899e8bbc75ab69e43c7519a"
       def install
         bin.install "gqlc"
       end
@@ -53,7 +53,7 @@ class Gqlc < Formula
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "2cca95c61190a4707f62d39017677f16d60de5c2064b91def13b3479342f4a4e"
+      sha256 "93972bb261b9ac8323e30be09154d79fa97333d5396671fe8fa9dd5d1cde12d4"
       def install
         bin.install "gqlc"
       end
