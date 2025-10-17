@@ -5,29 +5,29 @@
 class Gqlc < Formula
   desc "GraphQL compiler"
   homepage "https://github.com/tsukinoko-kun/gqlc"
-  version "1.0.0"
+  version "1.0.1"
   license "Zlib"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tsukinoko-kun/gqlc/releases/download/v1.0.0/gqlc_Darwin_x86_64.tar.gz",
+      url "https://github.com/tsukinoko-kun/gqlc/releases/download/v1.0.1/gqlc_Darwin_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "fbbcf3fc6dafe3527a3554fb6d9aff34bc513d284b9aef872fe3a582037b6f9e"
+      sha256 "3cf198ce3e562232a718d8ab8b13359ea493f1c658af18406355bb08d6158667"
 
       def install
         bin.install "gqlc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tsukinoko-kun/gqlc/releases/download/v1.0.0/gqlc_Darwin_arm64.tar.gz",
+      url "https://github.com/tsukinoko-kun/gqlc/releases/download/v1.0.1/gqlc_Darwin_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "945fe83862fa080d92e32a2d63759cebb27a9cef4c5b3ddbc89a3a51c5b96cf7"
+      sha256 "860edf0ef4954e5f18f7470ef5c83168870c04706570b8ea327fbc8557274747"
 
       def install
         bin.install "gqlc"
@@ -37,23 +37,23 @@ class Gqlc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tsukinoko-kun/gqlc/releases/download/v1.0.0/gqlc_Linux_x86_64.tar.gz",
+      url "https://github.com/tsukinoko-kun/gqlc/releases/download/v1.0.1/gqlc_Linux_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "1aa1ef2f608ec0fd61963b5fc0bb7db78d67968f4da7a802027886959ce5bbc1"
+      sha256 "5e182d93e5661a5156ac7ef10491f2a65efd2acb12fa598768ee36ad2f7fbc2b"
       def install
         bin.install "gqlc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tsukinoko-kun/gqlc/releases/download/v1.0.0/gqlc_Linux_arm64.tar.gz",
+      url "https://github.com/tsukinoko-kun/gqlc/releases/download/v1.0.1/gqlc_Linux_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "5e40de5e83e223868bd3860839d742ec3287e1e56fb6a81df20e12f5ebca1dda"
+      sha256 "affc2f78af76498f0aacd0680b1ab6ec26d16ea83b738961d7978f719fff2ed2"
       def install
         bin.install "gqlc"
       end
