@@ -1,14 +1,14 @@
 cask "harbor" do
-  version "0.1.0"
+  version "0.1.1"
 
   on_arm do
-    sha256 "82627fade75efe513f18918aced57572d1c046c4fcd3b1d2a4e98aa7524a73f9"
-    url "https://github.com/tsukinoko-kun/harbor/releases/download/v0.1.0/harbor-macos-arm64.tar.gz"
+    sha256 "3c7b73abff63e46038838ce4acabc63ebf8d6f2ed30c13b337c9527aa0fb7a5c"
+    url "https://github.com/tsukinoko-kun/harbor/releases/download/v0.1.1/harbor-macos-arm64.tar.gz"
   end
 
   name "Harbor"
   desc "GUI application for Docker"
   homepage "https://github.com/tsukinoko-kun/harbor"
 
-  binary "harbor"
+  app "Harbor.app"
 end
