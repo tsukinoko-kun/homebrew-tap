@@ -1,20 +1,20 @@
 class Harbor < Formula
   desc "GUI application for Docker"
   homepage "https://github.com/tsukinoko-kun/harbor"
-  version "0.1.3"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/tsukinoko-kun/harbor/releases/download/v0.1.3/harbor-macos-arm64-cli.tar.gz"
-      sha256 "0587b0fe24c6811d232d58984db91039a00c7e4cdec1f274e358d99b749057db"
+      url "https://github.com/tsukinoko-kun/harbor/releases/download/v0.2.0/harbor-macos-arm64-cli.tar.gz"
+      sha256 "d1b318e98a484626fccf505679287b319fb4dd6c8da0033676a30dbd6331d26a"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/tsukinoko-kun/harbor/releases/download/v0.1.3/harbor-linux-amd64.tar.gz"
-      sha256 "fb39346ac2cd23a94aa9a1799747d8bd5eb4991d060c03fd52ca877c30910f3d"
+      url "https://github.com/tsukinoko-kun/harbor/releases/download/v0.2.0/harbor-linux-amd64.tar.gz"
+      sha256 "69055819bd08132477387ba421d60e3dd3f7c72ccdd540bf280e7df8af383ca6"
     end
   end
 
