@@ -1,8 +1,8 @@
 cask "vessl" do
-  version "0.0.2"
+  version "0.0.3"
   on_arm do
-    sha256 "b09a5c7481c7649da9c568166238e528e35c31263a1d634568dbee54febc8edf"
-    url "https://github.com/bloodmagesoftware/vessl/releases/download/v0.0.2/vessl-macos-arm64.tar.gz"
+    sha256 "7065c481025aff2fcd7e8bc651e1910021ed374210c6ddd4137cc3d12ed85a8d"
+    url "https://github.com/bloodmagesoftware/vessl/releases/download/v0.0.3/vessl-macos-arm64.tar.gz"
   end
   name "vessl"
   desc "High-performance extensible IDE"
