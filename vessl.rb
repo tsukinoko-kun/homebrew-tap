@@ -1,7 +1,7 @@
 class Vessl < Formula
   desc "High-performance extensible IDE"
   homepage "https://github.com/bloodmagesoftware/vessl"
-  version "0.0.13"
+  version "0.0.14"
   license "MIT"
 
   on_macos do
@@ -10,19 +10,19 @@ class Vessl < Formula
     depends_on "sdl3_image"
 
     on_arm do
-      url "https://github.com/bloodmagesoftware/vessl/releases/download/v0.0.13/vessl-macos-arm64-cli.tar.gz"
-      sha256 "620ced7cd89b37459d7960ab0d4e3c6ad18db797d14289b4b923533ff162b5dd"
+      url "https://github.com/bloodmagesoftware/vessl/releases/download/v0.0.14/vessl-macos-arm64-cli.tar.gz"
+      sha256 "233e735af67641fb3aaeb160779aaa6df77998bebbb6158689c73b02b2354ec9"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/bloodmagesoftware/vessl/releases/download/v0.0.13/vessl-linux-amd64.AppImage"
-      sha256 "184a752160fce307ac916c09622842571a90470b79e8a36951a1aefab8e5224e"
+      url "https://github.com/bloodmagesoftware/vessl/releases/download/v0.0.14/vessl-linux-amd64.AppImage"
+      sha256 "c00b2205b5008433f32fe81eab4946f79409d4b9971f8e8adb658cf3ea209540"
     end
     on_arm do
-      url "https://github.com/bloodmagesoftware/vessl/releases/download/v0.0.13/vessl-linux-arm64.AppImage"
-      sha256 "02e01ae6f6eacca0617d5e1ce006df3d46786a8c5093586d13c97c1dad87d488"
+      url "https://github.com/bloodmagesoftware/vessl/releases/download/v0.0.14/vessl-linux-arm64.AppImage"
+      sha256 "0a218053f61714d8f8f7827dbc78dac5b1f75829b69d5a99e6720885f305c84c"
     end
   end
 
