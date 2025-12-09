@@ -1,8 +1,8 @@
 cask "vessl" do
-  version "0.0.16"
+  version "0.0.17"
   on_arm do
-    sha256 "85298b709ba82063b2cb122be51e1f1d481e5d5c1a9efca4fb052ccd5121ca22"
-    url "https://github.com/bloodmagesoftware/vessl/releases/download/v0.0.16/vessl-macos-arm64.tar.gz"
+    sha256 "98f13afc3c945ba59ba79fa32812b6441d5bae5529b392b183b9ffda4c7a09c2"
+    url "https://github.com/bloodmagesoftware/vessl/releases/download/v0.0.17/vessl-macos-arm64.tar.gz"
   end
   name "Vessl"
   desc "High-performance extensible IDE"
@@ -11,5 +11,5 @@ cask "vessl" do
   depends_on formula: "sdl3_ttf"
   depends_on formula: "sdl3_image"
   app "Vessl.app"
-  binary "vessl"
+  binary "#{appdir}/Vessl.app/Contents/MacOS/vessl-cli", target: "vessl"
 end
