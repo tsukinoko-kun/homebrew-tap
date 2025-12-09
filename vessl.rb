@@ -11,18 +11,18 @@ class Vessl < Formula
 
     on_arm do
       url "https://github.com/bloodmagesoftware/vessl/releases/download/v0.0.16/vessl-macos-arm64-cli.tar.gz"
-      sha256 "34f8c43e88c41c0a8fd317337f083a953220dc2af310bc16a62dd3069fb2655a"
+      sha256 "6386a69c3c319aeff1148f8d23c618fb75a6d7180f1b51c45f902c1687e39a4d"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/bloodmagesoftware/vessl/releases/download/v0.0.16/vessl-linux-amd64.AppImage"
-      sha256 "a30a02ad2337aa7077ad1deb4595c3ead524a7b55d40f438fc2b41e55359fef5"
+      sha256 "ed17a51f8229c5e0912cef4ee0add3328df25cb2432e51be2e3310e83f64cd9d"
     end
     on_arm do
       url "https://github.com/bloodmagesoftware/vessl/releases/download/v0.0.16/vessl-linux-arm64.AppImage"
-      sha256 "a1f670ea7857816888ad75427c6003c4309624ee7995162a5f6518008c54f755"
+      sha256 "ee098048507a75a31250b46d51ef7713ca8c836758952b6204bd3a50ee7479ce"
     end
   end
 
