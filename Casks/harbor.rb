@@ -1,9 +1,9 @@
 cask "harbor" do
-  version "1.3.0"
+  version "1.4.0"
 
   on_arm do
-    sha256 "39648e2aa8b2cc15f3a85963d03a5dc048f52eb19dea587bcf2ccdec462b749f"
-    url "https://github.com/tsukinoko-kun/harbor/releases/download/v1.3.0/harbor-macos-arm64.tar.gz"
+    sha256 "0f8a1c16eee61a10d0e579cd4810c3f7955156efda92bb89091f140dac27b5d3"
+    url "https://github.com/tsukinoko-kun/harbor/releases/download/v1.4.0/harbor-macos-arm64.tar.gz"
   end
 
   name "Harbor"
